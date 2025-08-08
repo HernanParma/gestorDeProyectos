@@ -1,0 +1,1066 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\mappers\\projectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\mappers\\projectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\services\\approvalstepbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\services\\approvalstepbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\services\\projectproposalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\services\\projectproposalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\projectdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\projectdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aprobacionproyectosapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|solutionrelative:aprobacionproyectosapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aprobacionproyectosapi\\controllers\\informationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|solutionrelative:aprobacionproyectosapi\\controllers\\informationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\approvalrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\approvalrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\approvalstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\approvalstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\approverrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\approverrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\projectapprovalstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\projectapprovalstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\projectproposal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\projectproposal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\projecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\projecttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\domain\\entitis\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3803B17D-B3E8-4C52-B00B-A575555372E4}|Domain\\Domain.csproj|solutionrelative:domain\\entitis\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aprobacionproyectosapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|solutionrelative:aprobacionproyectosapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aprobacionproyectosapi\\aprobacionproyectosapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|solutionrelative:aprobacionproyectosapi\\aprobacionproyectosapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iapprovalrulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iapprovalrulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\factory\\projectfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\factory\\projectfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojectproposalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojectproposalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\approverroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\approverroledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\approvalstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\approvalstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\approvalstepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\approvalstepdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\areadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\areadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\repositories\\projectapprovalsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\repositories\\projectapprovalsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojectapprovalsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojectapprovalsteprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\data\\approvalruledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\data\\approvalruledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\data\\approverroledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\data\\approverroledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\data\\approvalstatusdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\data\\approvalstatusdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iapprovalstepbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iapprovalstepbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojectfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojectfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\services\\approverroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\services\\approverroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojecttypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojecttypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\services\\projecttypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\services\\projecttypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\services\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\services\\areaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\services\\approvalstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\services\\approvalstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\updateprojectproposaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\updateprojectproposaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\stepdecisiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\stepdecisiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\dtos\\projecttypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\dtos\\projecttypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\repositories\\projectapprovalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\repositories\\projectapprovalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\repositories\\approvalrulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\repositories\\approvalrulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herna\\source\\repos\\AprobacionProyectosAPI\\Infraestructure\\Migrations\\20250526132137_mimigracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\infraestructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\infraestructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\data\\areadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\data\\areadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\data\\projecttypedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\data\\projecttypedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\infraestructure\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0654E58E-7D50-455C-8169-50632A70D266}|Infraestructure\\Infraestructure.csproj|solutionrelative:infraestructure\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iprojectapprovalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iprojectapprovalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iareaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iapproverroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iapproverroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aplication\\interfaces\\iapprovalstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FA515CD-220C-4D8C-9DBC-B7BA803D2541}|Aplication\\Aplication.csproj|solutionrelative:aplication\\interfaces\\iapprovalstatusservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|c:\\users\\herna\\desktop\\tp3front\\back\\aprobacionproyectosapi\\aprobacionproyectosapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{480E8657-34D3-4F6D-90E2-C0023D6378FA}|AprobacionProyectosAPI\\AprobacionProyectosAPI.csproj|solutionrelative:aprobacionproyectosapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infraestructure\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 13,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectProposalService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ProjectProposalService.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Services\\ProjectProposalService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ProjectProposalService.cs",
+              "RelativeToolTip": "Infraestructure\\Services\\ProjectProposalService.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAADgv1sAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:11:43.563Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{28836128-fc2c-11d2-a433-00c04f72d18a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\UserService.cs",
+              "RelativeToolTip": "Infraestructure\\Services\\UserService.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:30:16.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectMapper.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Mappers\\ProjectMapper.cs",
+              "RelativeDocumentMoniker": "Aplication\\Mappers\\ProjectMapper.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Mappers\\ProjectMapper.cs",
+              "RelativeToolTip": "Aplication\\Mappers\\ProjectMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAArwBIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T19:48:13.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infraestructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAADwv5QAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:32:53.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ProjectDetailDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\ProjectDetailDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ProjectDetailDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\ProjectDetailDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T13:43:58.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApprovalStepBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Services\\ApprovalStepBuilder.cs",
+              "RelativeDocumentMoniker": "Aplication\\Services\\ApprovalStepBuilder.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Services\\ApprovalStepBuilder.cs",
+              "RelativeToolTip": "Aplication\\Services\\ApprovalStepBuilder.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T19:47:50.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InformationController.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\Controllers\\InformationController.cs",
+              "RelativeDocumentMoniker": "AprobacionProyectosAPI\\Controllers\\InformationController.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\Controllers\\InformationController.cs",
+              "RelativeToolTip": "AprobacionProyectosAPI\\Controllers\\InformationController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:03:19.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "AprobacionProyectosAPI\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "AprobacionProyectosAPI\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAuwFUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:50:07.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Repositories\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ProjectRepository.cs",
+              "RelativeToolTip": "Infraestructure\\Repositories\\ProjectRepository.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAvwGwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T23:23:58.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApprovalRule.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ApprovalRule.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\ApprovalRule.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ApprovalRule.cs",
+              "RelativeToolTip": "Domain\\Entitis\\ApprovalRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:16.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApprovalStatus.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ApprovalStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\ApprovalStatus.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ApprovalStatus.cs",
+              "RelativeToolTip": "Domain\\Entitis\\ApprovalStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:18.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApproverRole.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ApproverRole.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\ApproverRole.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ApproverRole.cs",
+              "RelativeToolTip": "Domain\\Entitis\\ApproverRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:19.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Area.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\Area.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\Area.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\Area.cs",
+              "RelativeToolTip": "Domain\\Entitis\\Area.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:21.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Enum.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\Enum.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\Enum.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\Enum.cs",
+              "RelativeToolTip": "Domain\\Entitis\\Enum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:22.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjectApprovalStep.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ProjectApprovalStep.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\ProjectApprovalStep.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ProjectApprovalStep.cs",
+              "RelativeToolTip": "Domain\\Entitis\\ProjectApprovalStep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:23.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProjectProposal.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ProjectProposal.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\ProjectProposal.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ProjectProposal.cs",
+              "RelativeToolTip": "Domain\\Entitis\\ProjectProposal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:24.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProjectType.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ProjectType.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\ProjectType.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\ProjectType.cs",
+              "RelativeToolTip": "Domain\\Entitis\\ProjectType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:27.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entitis\\User.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Entitis\\User.cs",
+              "RelativeToolTip": "Domain\\Entitis\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:23:46.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\Program.cs",
+              "RelativeDocumentMoniker": "AprobacionProyectosAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\Program.cs",
+              "RelativeToolTip": "AprobacionProyectosAPI\\Program.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:29:39.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\UserDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\UserDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:47:27.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:10:33.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProjectFactory.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Factory\\ProjectFactory.cs",
+              "RelativeDocumentMoniker": "Aplication\\Factory\\ProjectFactory.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Factory\\ProjectFactory.cs",
+              "RelativeToolTip": "Aplication\\Factory\\ProjectFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T19:47:17.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IApprovalRuleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApprovalRuleRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IApprovalRuleRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApprovalRuleRepository.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IApprovalRuleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T11:32:57.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AprobacionProyectosAPI.http",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\AprobacionProyectosAPI.http",
+              "RelativeDocumentMoniker": "AprobacionProyectosAPI\\AprobacionProyectosAPI.http",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\AprobacionProyectosAPI.http",
+              "RelativeToolTip": "AprobacionProyectosAPI\\AprobacionProyectosAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-06-02T12:52:33.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectRepository.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:10:27.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IProjectProposalService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectProposalService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectProposalService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectProposalService.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectProposalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:10:54.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CreateProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\CreateProjectDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\CreateProjectDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\CreateProjectDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\CreateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:15:47.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ApproverRoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ApproverRoleDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\ApproverRoleDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ApproverRoleDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\ApproverRoleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:46:33.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ApprovalStepDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ApprovalStepDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\ApprovalStepDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ApprovalStepDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\ApprovalStepDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:44:29.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ApprovalStatusDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ApprovalStatusDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\ApprovalStatusDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ApprovalStatusDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\ApprovalStatusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:46:57.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AreaDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\AreaDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\AreaDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\AreaDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\AreaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:41:49.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProjectApprovalStepRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ProjectApprovalStepRepository.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Repositories\\ProjectApprovalStepRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ProjectApprovalStepRepository.cs",
+              "RelativeToolTip": "Infraestructure\\Repositories\\ProjectApprovalStepRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAwwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T00:51:15.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IProjectApprovalStepRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectApprovalStepRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectApprovalStepRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectApprovalStepRepository.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectApprovalStepRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:49:09.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IProjectMapper.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectMapper.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectMapper.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectMapper.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T21:57:33.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ApprovalRuleData.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ApprovalRuleData.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Data\\ApprovalRuleData.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ApprovalRuleData.cs",
+              "RelativeToolTip": "Infraestructure\\Data\\ApprovalRuleData.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:23:59.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ApproverRoleData.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ApproverRoleData.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Data\\ApproverRoleData.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ApproverRoleData.cs",
+              "RelativeToolTip": "Infraestructure\\Data\\ApproverRoleData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:37.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ApprovalStatusData.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ApprovalStatusData.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Data\\ApprovalStatusData.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ApprovalStatusData.cs",
+              "RelativeToolTip": "Infraestructure\\Data\\ApprovalStatusData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:32.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IProjectFactory.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectFactory.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectFactory.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectFactory.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T21:56:04.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IApprovalStepBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApprovalStepBuilder.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IApprovalStepBuilder.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApprovalStepBuilder.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IApprovalStepBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T21:56:55.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ApproverRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ApproverRoleService.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Services\\ApproverRoleService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ApproverRoleService.cs",
+              "RelativeToolTip": "Infraestructure\\Services\\ApproverRoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:50:49.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ApprovalStatusService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ApprovalStatusService.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Services\\ApprovalStatusService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ApprovalStatusService.cs",
+              "RelativeToolTip": "Infraestructure\\Services\\ApprovalStatusService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:51:09.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IProjectTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectTypeService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectTypeService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectTypeService.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:49:09.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ProjectTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ProjectTypeService.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Services\\ProjectTypeService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\ProjectTypeService.cs",
+              "RelativeToolTip": "Infraestructure\\Services\\ProjectTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:51:00.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AreaService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\AreaService.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Services\\AreaService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Services\\AreaService.cs",
+              "RelativeToolTip": "Infraestructure\\Services\\AreaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:43:05.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UpdateProjectProposalDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\UpdateProjectProposalDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\UpdateProjectProposalDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\UpdateProjectProposalDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\UpdateProjectProposalDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:57:26.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "StepDecisionDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\StepDecisionDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\StepDecisionDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\StepDecisionDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\StepDecisionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T15:57:29.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "RoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\RoleDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\RoleDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\RoleDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\RoleDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:48:25.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ProjectTypeDto.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ProjectTypeDto.cs",
+              "RelativeDocumentMoniker": "Aplication\\Dtos\\ProjectTypeDto.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Dtos\\ProjectTypeDto.cs",
+              "RelativeToolTip": "Aplication\\Dtos\\ProjectTypeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:46:44.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ProjectApprovalRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ProjectApprovalRepository.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Repositories\\ProjectApprovalRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ProjectApprovalRepository.cs",
+              "RelativeToolTip": "Infraestructure\\Repositories\\ProjectApprovalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T00:51:25.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ApprovalRuleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ApprovalRuleRepository.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Repositories\\ApprovalRuleRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Repositories\\ApprovalRuleRepository.cs",
+              "RelativeToolTip": "Infraestructure\\Repositories\\ApprovalRuleRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T12:34:31.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Infraestructure.csproj",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Infraestructure.csproj",
+              "RelativeDocumentMoniker": "Infraestructure\\Infraestructure.csproj",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Infraestructure.csproj",
+              "RelativeToolTip": "Infraestructure\\Infraestructure.csproj",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-25T23:03:42.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "20250526132137_mimigracion.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\source\\repos\\AprobacionProyectosAPI\\Infraestructure\\Migrations\\20250526132137_mimigracion.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\AprobacionProyectosAPI\\Infraestructure\\Migrations\\20250526132137_mimigracion.cs",
+              "ToolTip": "C:\\Users\\herna\\source\\repos\\AprobacionProyectosAPI\\Infraestructure\\Migrations\\20250526132137_mimigracion.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\AprobacionProyectosAPI\\Infraestructure\\Migrations\\20250526132137_mimigracion.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:21:37.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "Domain\\Class1.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Domain\\Class1.cs",
+              "RelativeToolTip": "Domain\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T00:33:11.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AreaData.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\AreaData.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Data\\AreaData.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\AreaData.cs",
+              "RelativeToolTip": "Infraestructure\\Data\\AreaData.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:42.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ProjectTypeData.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ProjectTypeData.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Data\\ProjectTypeData.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\ProjectTypeData.cs",
+              "RelativeToolTip": "Infraestructure\\Data\\ProjectTypeData.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:47.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\UserData.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Data\\UserData.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Data\\UserData.cs",
+              "RelativeToolTip": "Infraestructure\\Data\\UserData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:24:55.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Class1.cs",
+              "RelativeDocumentMoniker": "Infraestructure\\Class1.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Infraestructure\\Class1.cs",
+              "RelativeToolTip": "Infraestructure\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T00:33:55.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IProjectApprovalRepository.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectApprovalRepository.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IProjectApprovalRepository.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IProjectApprovalRepository.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IProjectApprovalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T01:49:08.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "IAreaService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IAreaService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IAreaService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IAreaService.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IAreaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:42:29.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "IApproverRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApproverRoleService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IApproverRoleService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApproverRoleService.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IApproverRoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:49:30.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "IApprovalStatusService.cs",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApprovalStatusService.cs",
+              "RelativeDocumentMoniker": "Aplication\\Interfaces\\IApprovalStatusService.cs",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\Aplication\\Interfaces\\IApprovalStatusService.cs",
+              "RelativeToolTip": "Aplication\\Interfaces\\IApprovalStatusService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T22:48:52.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AprobacionProyectosAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\herna\\Desktop\\TP3Front\\back\\AprobacionProyectosAPI\\AprobacionProyectosAPI\\appsettings.Development.json",
+              "RelativeToolTip": "AprobacionProyectosAPI\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-15T02:34:40.867Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

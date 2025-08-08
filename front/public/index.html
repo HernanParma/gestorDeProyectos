@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio - Proyectos</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="p-4">
+  <header>
+    <div class="logo-section">
+      <a href="index.html"><img src="../logo.svg" alt="Logo" style="height:48px;"></a>
+      <h1>Gestor de Proyectos</h1>
+    </div>
+    <div class="header-search-container">
+      <input type="text" id="headerSearchInput" placeholder="Buscar proyecto por título..." class="header-search-input">
+      <button id="headerSearchButton" class="header-search-button">Buscar</button>
+    </div>
+    <div class="user-nav-section">
+      <button onclick="window.location.href='crear.html'" class="btn btn-primary">Crear Proyecto</button>
+      <a href="mis_proyectos.html" class="btn btn-info" style="margin-left: 10px;">Mis Proyectos</a>
+      <div id="loggedInUserContainer" class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownUserButton" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: none; color: #1976D2; font-weight: 500; font-size: 1.1em;">
+          Hola! <span id="userNameDisplay">Usuario</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUserButton">
+          <li><a class="dropdown-item" href="#" id="logoutButton">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-fluid mt-4 h-100">
+    <div class="row g-3 flex-lg-nowrap flex-wrap-reverse justify-content-center align-items-stretch min-vh-100" style="min-height: 100vh; display: flex; align-items: stretch; height: 100%;">
+      <aside class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column align-items-stretch sidebar-busqueda-proyectos order-2 order-lg-1 h-100 p-0 me-lg-4" style="height: 100%;">
+        <div class="card shadow-sm mb-4 d-flex flex-column sidebar-card-busqueda w-100 p-4" style="border-radius: 18px;">
+          <h4 class="text-primary mb-4 text-center" style="font-weight: bold; letter-spacing: 1px; font-size: 1.5em;">Buscar proyectos</h4>
+          <div class="flex-grow-1 d-flex flex-column justify-content-between" style="gap: 18px;">
+            <div>
+              <label for="search" class="form-label text-center w-100" style="font-size: 1.1em; font-weight: bold;">Título</label>
+              <input type="text" id="search" placeholder="Buscar por título..." class="form-control form-control-lg sidebar-input-busqueda" style="border-radius: 14px; padding: 16px 18px; font-size: 1.1em;">
+            </div>
+            <div>
+              <label for="estadoSelect" class="form-label text-center w-100" style="font-size: 1.1em; font-weight: bold;">Estado</label>
+              <select id="estadoSelect" class="form-select form-select-lg sidebar-input-busqueda" style="border-radius: 14px; padding: 16px 18px; font-size: 1.1em;">
+                <option value="">Todos</option>
+                <option value="1">Pending</option>
+                <option value="2">Approved</option>
+                <option value="3">Rejected</option>
+                <option value="4">Observed</option>
+              </select>
+            </div>
+            <div>
+              <label for="creadorSelect" class="form-label text-center w-100" style="font-size: 1.1em; font-weight: bold;">Usuario creador</label>
+              <select id="creadorSelect" class="form-select form-select-lg sidebar-input-busqueda" style="border-radius: 14px; padding: 16px 18px; font-size: 1.1em;"><option value="">Todos</option></select>
+            </div>
+            <div>
+              <label for="aprobadorSelect" class="form-label text-center w-100" style="font-size: 1.1em; font-weight: bold;">Usuario aprobador</label>
+              <select id="aprobadorSelect" class="form-select form-select-lg sidebar-input-busqueda" style="border-radius: 14px; padding: 16px 18px; font-size: 1.1em;"><option value="">Todos</option></select>
+            </div>
+          </div>
+          <button id="btnFiltrar" class="btn btn-primary w-100 mt-auto sidebar-btn-filtrar" style="border-radius: 14px; font-weight: bold; padding: 16px; font-size: 1.1em; margin-top: 24px;">Filtrar</button>
+        </div>
+        <div class="card shadow-sm mb-4 d-flex flex-column sidebar-card-busqueda w-100 p-4" style="border-radius: 18px;">
+          <h4 class="text-primary mb-4 text-center" style="font-weight: bold; letter-spacing: 1px; font-size: 1.3em;">Estadísticas</h4>
+          <div id="dashboard-estadisticas"></div>
+        </div>
+      </aside>
+      <section class="col-12 col-lg-8 order-1 order-lg-2 d-flex flex-column justify-content-end h-100 p-0" style="height: 100%;">
+        <div class="card shadow-sm mb-4 p-4 d-flex flex-column flex-grow-1 igualar-altura-cards altura-minima-proyectos" style="border-radius: 18px; background: #fff; box-shadow: 0 2px 12px rgba(25,118,210,0.07); height: 100%; min-height: 400px; overflow: auto; padding-bottom: 2.5rem;">
+          <div class="d-flex align-items-center mb-3" style="gap: 10px;">
+            <h2 class="fw-bold text-primary mb-0" style="letter-spacing: 1px;">Proyectos existentes</h2>
+          </div>
+          <div class="flex-grow-1 d-flex flex-column">
+            <div id="project-list" class="row g-4 flex-grow-1"></div>
+            <nav aria-label="Page navigation" class="mt-4">
+              <ul class="pagination justify-content-center" id="pagination-controls">
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../app.js"></script>
+  <footer style="margin-top: 48px; padding: 24px 0 0 0; border-top: 1px solid #ddd; text-align: center; color: #666; background: transparent;">
+    <div>
+      <a href="#" style="margin: 0 12px; color: #1976D2; text-decoration: none;">Contacto</a>
+      <a href="#" style="margin: 0 12px; color: #1976D2; text-decoration: none;">Términos</a>
+      <a href="#" style="margin: 0 12px; color: #1976D2; text-decoration: none;">Privacidad</a>
+    </div>
+    <div class="social-icons" style="margin-top: 12px;">
+      <a href="#" style="margin: 0 8px; color: #1976D2;"><i class="fab fa-twitter"></i></a>
+      <a href="#" style="margin: 0 8px; color: #1976D2;"><i class="fab fa-linkedin"></i></a>
+      <a href="#" style="margin: 0 8px; color: #1976D2;"><i class="fab fa-github"></i></a>
+    </div>
+    <div style="margin-top: 8px; font-size: 0.9em;">&copy; 2025 Gestor de Proyectos</div>
+  </footer>
+
+  <button id="scrollToTopBtn" title="Subir al inicio"></button>
+
+  <script>
+    function ajustarAlturaProyectos() {
+      const aside = document.querySelector('.sidebar-busqueda-proyectos');
+      const cardsAside = aside ? aside.querySelectorAll('.card') : [];
+      const proyectos = document.querySelector('.altura-minima-proyectos');
+      if (cardsAside.length === 2 && proyectos && window.innerWidth >= 992) {
+        const alturaTotal = cardsAside[0].offsetHeight + cardsAside[1].offsetHeight + 32; // 32px por el gap entre cards (mb-4)
+        proyectos.style.setProperty('--altura-total-aside', alturaTotal + 'px');
+      } else if (proyectos) {
+        proyectos.style.removeProperty('--altura-total-aside');
+      }
+    }
+    window.addEventListener('resize', ajustarAlturaProyectos);
+    window.addEventListener('DOMContentLoaded', ajustarAlturaProyectos);
+    window.addEventListener('load', ajustarAlturaProyectos);
+  </script>
+</body>
+</html>

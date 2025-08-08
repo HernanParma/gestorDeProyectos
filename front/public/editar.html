@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar Proyecto</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="p-4">
+  <header>
+    <div class="logo-section">
+      <a href="index.html"><img src="../logo.svg" alt="Logo" style="height:48px;"></a>
+      <h1>Gestor de Proyectos</h1>
+    </div>
+    <div class="header-search-container">
+      <input type="text" id="headerSearchInput" placeholder="Buscar proyecto por título..." class="header-search-input">
+      <button id="headerSearchButton" class="header-search-button">Buscar</button>
+    </div>
+    <div class="user-nav-section">
+      <button onclick="window.location.href='crear.html'" class="btn btn-primary">Crear Proyecto</button>
+      <a href="mis_proyectos.html" class="btn btn-info" style="margin-left: 10px;">Mis Proyectos</a>
+      <div id="loggedInUserContainer" class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownUserButton" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: none; color: #1976D2; font-weight: 500; font-size: 1.1em;">
+          Hola! <span id="userNameDisplay">Usuario</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUserButton">
+          <li><a class="dropdown-item" href="#" id="logoutButton">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="container mt-4 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-7">
+        <div class="card shadow-lg p-4" style="border-radius: 18px; background: #fff; border: none;">
+          <h1 class="fw-bold text-primary mb-4 text-center" style="letter-spacing: 1px;">Modificar Proyecto Existente</h1>
+
+          <form id="project-form">
+            <div class="row g-3">
+              <div class="col-12">
+                <label for="title" class="form-label fw-bold">Título del Proyecto:</label>
+                <input type="text" id="title" class="form-control form-control-lg" required style="border-radius: 12px; border: 1px solid #e0e0e0; padding: 12px;">
+              </div>
+
+              <div class="col-12">
+                <label for="description" class="form-label fw-bold">Descripción:</label>
+                <textarea id="description" class="form-control" rows="4" required style="border-radius: 12px; border: 1px solid #e0e0e0; padding: 12px;"></textarea>
+              </div>
+
+              <div class="col-12">
+                <label for="estimatedDuration" class="form-label fw-bold">Duración Estimada (días):</label>
+                <input type="number" id="estimatedDuration" class="form-control form-control-lg" required style="border-radius: 12px; border: 1px solid #e0e0e0; padding: 12px;">
+              </div>
+            </div>
+            <div class="d-grid gap-2 mt-4">
+              <button type="submit" class="btn btn-primary btn-lg" style="border-radius: 12px; font-weight: bold; padding: 12px;">Modificar Proyecto</button>
+              <button type="button" onclick="window.location.href='index.html'" class="btn btn-secondary btn-lg" style="border-radius: 12px; font-weight: bold; padding: 12px;">Volver a la Página Principal</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="success-message-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="success-modal-close-btn">&times;</span>
+      <p id="success-modal-message"></p>
+    </div>
+  </div>
+  <div id="success-message-modal-bg" class="modal-background"></div>
+
+  <div id="error-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" id="error-modal-close-btn">&times;</span>
+      <p id="error-message"></p>
+    </div>
+  </div>
+  <div id="error-modal-bg" class="modal-background"></div>
+
+  <footer style="margin-top: 48px; padding: 24px 0 0 0; border-top: 1px solid #ddd; text-align: center; color: #666; background: transparent;">
+    <div>
+      <a href="#" style="margin: 0 12px; color: #1976D2; text-decoration: none;">Contacto</a>
+      <a href="#" style="margin: 0 12px; color: #1976D2; text-decoration: none;">Términos</a>
+      <a href="#" style="margin: 0 12px; color: #1976D2; text-decoration: none;">Privacidad</a>
+    </div>
+    <div class="social-icons" style="margin-top: 12px;">
+      <a href="#" style="margin: 0 8px; color: #1976D2;"><i class="fab fa-twitter"></i></a>
+      <a href="#" style="margin: 0 8px; color: #1976D2;"><i class="fab fa-linkedin"></i></a>
+      <a href="#" style="margin: 0 8px; color: #1976D2;"><i class="fab fa-github"></i></a>
+    </div>
+    <div style="margin-top: 8px; font-size: 0.9em;">&copy; 2025 Gestor de Proyectos</div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const userNameDisplay = document.getElementById('userNameDisplay');
+      const logoutButton = document.getElementById('logoutButton');
+
+      let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado') || '{}');
+
+      if (!usuarioLogueado || !usuarioLogueado.id) {
+          window.location.href = 'login.html';
+          return; 
+      } else {
+          userNameDisplay.textContent = usuarioLogueado.name;
+      }
+
+      logoutButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('usuarioLogueado');
+          window.location.href = 'login.html';
+      });
+
+      const headerSearchInput = document.getElementById('headerSearchInput');
+      const headerSearchButton = document.getElementById('headerSearchButton');
+
+      const performHeaderSearch = () => {
+          const title = headerSearchInput.value;
+          if (title) {
+              window.location.href = `index.html?title=${encodeURIComponent(title)}`;
+          } else {
+              window.location.href = `index.html`;
+          }
+      };
+
+      headerSearchButton.onclick = performHeaderSearch;
+      headerSearchInput.addEventListener('keypress', function(event) {
+          if (event.key === 'Enter') {
+              performHeaderSearch();
+          }
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../src/pages/editar.js"></script>
+</body>
+</html>
