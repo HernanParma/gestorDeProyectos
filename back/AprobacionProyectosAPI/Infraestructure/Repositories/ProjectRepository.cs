@@ -124,5 +124,14 @@ namespace Infraestructure.Repositories
                 .AnyAsync(p => p.Title.ToLower() == title.ToLower());
         }
 
+        public async Task DeleteAsync(Guid id)
+        {
+            var project = await _context.ProjectProposal.FindAsync(id);
+            if (project != null)
+            {
+                _context.ProjectProposal.Remove(project);
+            }
+        }
+
     }
 }

@@ -96,7 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
 
           <div class="text-center mt-3">
-            <button class="btn btn-primary btn-lg" onclick="window.location.href='editar.html?id=${data.id}'" style="border-radius: 12px; font-weight: bold; padding: 12px 24px;">Editar Proyecto</button>
+            <button class="btn btn-primary btn-lg me-3" onclick="window.location.href='editar.html?id=${data.id}'" style="border-radius: 12px; font-weight: bold; padding: 12px 24px;">Editar Proyecto</button>
+            <button class="btn btn-danger btn-lg" onclick="eliminarProyectoDesdeDetalle('${data.id}', '${data.title}')" style="border-radius: 12px; font-weight: bold; padding: 12px 24px;">
+              <i class="fas fa-trash me-2"></i>Eliminar Proyecto
+            </button>
           </div>
         </div>
       `;
@@ -342,13 +345,35 @@ document.addEventListener('DOMContentLoaded', () => {
   function mostrarMensajeExito(message) {
     const successMsgModal = document.getElementById('success-message-modal');
     const successMsgModalText = document.getElementById('success-modal-message');
+    const successMsgModalBg = document.getElementById('success-message-modal-bg');
+    const successModalCloseCross = document.getElementById('success-modal-close-cross');
 
     if (successMsgModal && successMsgModalText) {
       successMsgModalText.textContent = message;
       successMsgModal.style.display = 'block';
       
-      const successMsgModalBg = document.getElementById('success-message-modal-bg');
       if (successMsgModalBg) successMsgModalBg.style.display = 'block';
+
+      // Función para cerrar el modal
+      const closeSuccessModal = () => {
+        successMsgModal.style.display = 'none';
+        if (successMsgModalBg) successMsgModalBg.style.display = 'none';
+      };
+
+      // Configurar event listeners para cerrar el modal
+      if (successModalCloseCross) {
+        successModalCloseCross.onclick = closeSuccessModal;
+      }
+      
+      if (successMsgModalBg) {
+        successMsgModalBg.onclick = closeSuccessModal;
+      }
+
+      // Auto-cerrar después de 3 segundos
+      setTimeout(() => {
+        closeSuccessModal();
+      }, 3000);
+
     } else {
       console.error('ERROR: No se pudo encontrar el modal de éxito o su texto.');
     }
@@ -374,4 +399,62 @@ document.addEventListener('DOMContentLoaded', () => {
     errorModalCloseBtn.onclick = closeErrorModal;
     errorModalBg.onclick = closeErrorModal;
   }
+
+  // Función para eliminar proyecto desde la página de detalle
+  window.eliminarProyectoDesdeDetalle = async function(projectId, projectTitle) {
+    console.log('Intentando eliminar proyecto desde detalle:', projectId, projectTitle);
+    
+    // Validar que el ID sea válido
+    if (!projectId || projectId === 'undefined' || projectId === 'null' || projectId === '') {
+      console.error('ID del proyecto no válido:', projectId);
+      alert('Error: ID del proyecto no válido');
+      return false;
+    }
+    
+    if (!confirm(`¿Estás seguro de que deseas eliminar el proyecto "${projectTitle}"? Esta acción no se puede deshacer.`)) {
+      return false;
+    }
+
+    try {
+      console.log('Enviando petición DELETE a:', `https://localhost:7098/api/project/${projectId}`);
+      
+      const response = await fetch(`https://localhost:7098/api/project/${projectId}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      console.log('Respuesta del servidor:', response.status, response.statusText);
+
+      if (response.ok) {
+        // Mostrar mensaje de éxito
+        alert('Proyecto eliminado exitosamente');
+        
+        // Redirigir a la página principal
+        window.location.href = 'index.html';
+      } else {
+        let errorMessage = 'Error al eliminar el proyecto';
+        try {
+          const errorData = await response.json();
+          console.error('Error del servidor (JSON):', errorData);
+          if (errorData.errors && errorData.errors.id) {
+            errorMessage = `Error de validación: ${errorData.errors.id[0]}`;
+          } else if (errorData.title) {
+            errorMessage = errorData.title;
+          }
+        } catch (e) {
+          const errorText = await response.text();
+          console.error('Error del servidor (texto):', errorText);
+          errorMessage = errorText || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.error('Error al eliminar proyecto:', error);
+      alert('Error al eliminar el proyecto: ' + error.message);
+    }
+    
+    return false;
+  };
 });

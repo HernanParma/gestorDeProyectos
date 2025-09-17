@@ -69,5 +69,14 @@ namespace Infraestructure.Repositories
             }
         }
 
+        public async Task DeleteAsync(Guid id)
+        {
+            var step = await _context.ProjectApprovalStep.FindAsync(id);
+            if (step != null)
+            {
+                _context.ProjectApprovalStep.Remove(step);
+            }
+        }
+
     }
 }

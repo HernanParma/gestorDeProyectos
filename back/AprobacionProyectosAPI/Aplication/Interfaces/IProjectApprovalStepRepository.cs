@@ -15,5 +15,6 @@ namespace Aplication.Interfaces
         Task SaveChangesAsync();
         Task<List<ProjectApprovalStep>> GetStepsByProjectIdWithUserAndRoleAsync(Guid projectId);
         Task<List<ProjectApprovalStep>> GetByUserIdAsync(int userId);
+        Task DeleteAsync(Guid id);
     }
 }

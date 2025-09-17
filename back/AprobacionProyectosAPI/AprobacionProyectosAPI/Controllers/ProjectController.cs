@@ -182,5 +182,38 @@ namespace AprobacionProyectosAPI.Controllers
             if (project == null) return NotFound();
             return Ok(project);
         }
+
+        /// <summary>
+        /// Elimina un proyecto por su ID.
+        /// </summary>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProject(Guid id)
+        {
+            try
+            {
+                var project = await _projectRepository.GetByIdAsync(id);
+                if (project == null)
+                {
+                    return NotFound($"Proyecto con el ID: {id} no encontrado");
+                }
+
+                // Eliminar pasos de aprobación relacionados
+                var steps = await _stepRepository.GetStepsByProjectIdAsync(id);
+                foreach (var step in steps)
+                {
+                    await _stepRepository.DeleteAsync(step.Id);
+                }
+
+                // Eliminar el proyecto
+                await _projectRepository.DeleteAsync(id);
+                await _projectRepository.SaveChangesAsync();
+
+                return Ok(new { message = "Proyecto eliminado exitosamente" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { error = "Ocurrió un error interno al eliminar el proyecto." });
+            }
+        }
     }
 }

@@ -73,6 +73,7 @@
               <option value="">Selecciona un usuario...</option>
           </select>
           <button id="loginButton" class="btn btn-primary">Entrar</button>
+          <button id="clearSessionButton" class="btn btn-secondary" style="width: 100%; margin-top: 10px; display: none;">Limpiar Sesión Actual</button>
           <div id="errorMessage" class="error-message"></div>
         </div>
       </div>
@@ -97,6 +98,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const userSelect = document.getElementById('userSelect');
             const loginButton = document.getElementById('loginButton');
+            const clearSessionButton = document.getElementById('clearSessionButton');
             const errorMessage = document.getElementById('errorMessage');
 
             let rolesMap = new Map(); // Mapa para almacenar roles por ID
@@ -120,11 +122,25 @@
                     userSelect.appendChild(option);
                 });
 
-                // Redirigir si ya hay un usuario logueado después de cargar los roles y usuarios
+                // Verificar si ya hay un usuario logueado y mostrar mensaje
                 const usuarioLogueado = localStorage.getItem('usuarioLogueado');
                 if (usuarioLogueado) {
-                    window.location.href = 'index.html';
+                    const userData = JSON.parse(usuarioLogueado);
+                    const infoDiv = document.createElement('div');
+                    infoDiv.className = 'alert alert-info';
+                    infoDiv.innerHTML = `
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Usuario actual:</strong> ${userData.name}
+                        <br><small>Puedes seleccionar otro usuario para cambiar de sesión.</small>
+                    `;
+                    infoDiv.style.marginBottom = '20px';
+                    userSelect.parentNode.insertBefore(infoDiv, userSelect);
+                    
+                    // Mostrar botón de limpiar sesión
+                    clearSessionButton.style.display = 'block';
                 }
+                
+                console.log('Usuarios cargados correctamente. Usuario puede seleccionar.');
             })
             .catch(error => {
                 errorMessage.textContent = 'No se pudieron cargar los usuarios o roles: ' + error.message;
@@ -138,16 +154,24 @@
                 const selectedUserData = JSON.parse(selectedOption.dataset.user || '{}');
 
                 if (selectedUserId && selectedUserData.id) {
-                    localStorage.setItem('usuarioLogueado', JSON.stringify({ 
+                    const userToSave = { 
                         id: selectedUserData.id,
                         name: selectedUserData.name,
                         roleName: selectedUserData.roleName // Asegurarse de que roleName exista en los datos de la API
-                    }));
+                    };
+                    console.log('Guardando usuario en localStorage:', userToSave);
+                    localStorage.setItem('usuarioLogueado', JSON.stringify(userToSave));
+                    console.log('Usuario guardado correctamente');
                     window.location.href = 'index.html'; // Redirigir a la página principal
                 } else {
                     errorMessage.textContent = 'Por favor, selecciona un usuario para continuar.';
                     errorMessage.style.display = 'block';
                 }
+            });
+
+            clearSessionButton.addEventListener('click', () => {
+                localStorage.removeItem('usuarioLogueado');
+                location.reload(); // Recargar la página para limpiar la interfaz
             });
         });
     </script>

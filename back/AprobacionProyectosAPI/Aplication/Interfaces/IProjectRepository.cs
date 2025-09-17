@@ -20,6 +20,7 @@ namespace Aplication.Interfaces
         Task<List<ProjectProposal>> GetFilteredProjectsAsync(string? title, int? status, int? applicant, int? approvalUser);
         Task<ProjectProposal?> GetByIdWithApprovalStepsAsync(Guid id);
         Task<bool> ExistsWithTitleAsync(string title);
+        Task DeleteAsync(Guid id);
 
     }
 }

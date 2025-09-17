@@ -1,8 +1,51 @@
+// Función global para cargar todos los proyectos (fallback)
+window.loadAllProjectsAsFallback = async function() {
+    try {
+        console.log('Cargando todos los proyectos como fallback...');
+        const response = await fetch('https://localhost:7098/api/project');
+        if (response.ok) {
+            const allProjects = await response.json();
+            console.log('Mostrando todos los proyectos como fallback:', allProjects);
+            
+            // Obtener referencias a los elementos
+            const projectListContainer = document.getElementById('my-project-list');
+            const noProjectsMessage = document.getElementById('no-projects-message');
+            
+            if (projectListContainer && noProjectsMessage) {
+                renderProyectos(allProjects, projectListContainer, noProjectsMessage);
+            }
+        } else {
+            console.error('Error al cargar todos los proyectos como fallback:', response.status, response.statusText);
+        }
+    } catch (error) {
+        console.error('Error en fallback:', error);
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     const projectListContainer = document.getElementById('my-project-list');
     const noProjectsMessage = document.getElementById('no-projects-message');
 
     const usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado') || '{}');
+    
+    console.log('=== INICIO MIS PROYECTOS ===');
+    console.log('Datos del localStorage:', localStorage.getItem('usuarioLogueado'));
+    console.log('Usuario parseado:', usuarioLogueado);
+    
+    // Función para actualizar el nombre del usuario en la barra de navegación
+    function updateUserDisplay() {
+        const userNameDisplay = document.getElementById('userNameDisplay');
+        if (userNameDisplay && usuarioLogueado.name) {
+            userNameDisplay.textContent = usuarioLogueado.name;
+            console.log('Nombre del usuario actualizado en mis_proyectos:', usuarioLogueado.name);
+        } else {
+            console.error('No se pudo actualizar el nombre del usuario en mis_proyectos');
+        }
+    }
+    
+    // Ejecutar inmediatamente y también después de un pequeño delay
+    updateUserDisplay();
+    setTimeout(updateUserDisplay, 100);
 
     // Referencias a los nuevos modales
     const confirmDeleteModalBg = document.getElementById('confirm-delete-modal-bg');
@@ -15,18 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const successDeleteCloseBtn = document.getElementById('success-delete-close-btn');
     const successDeleteCloseCross = document.getElementById('success-delete-close-cross');
 
-    let currentProjectIdToDelete = null; // Variable para guardar el ID del proyecto a eliminar
+    let currentProjectIdToDelete = null;
 
     if (!usuarioLogueado || !usuarioLogueado.id) {
-        // Esto no debería ocurrir si la redirección en mis_proyectos.html funciona, pero es una seguridad
+        console.error('Usuario no logueado o sin ID:', usuarioLogueado);
         window.location.href = 'login.html';
         return;
     }
+    
+    console.log('Usuario válido, continuando...');
 
     // Funciones para mostrar/ocultar modales
     function showConfirmDeleteModal(projectId) {
         console.log('showConfirmDeleteModal llamada con projectId:', projectId);
-        confirmDeleteBtn.setAttribute('data-confirm-project-id', projectId);
+        currentProjectIdToDelete = projectId;
         confirmDeleteModalBg.style.display = 'block';
         confirmDeleteModal.style.display = 'block';
     }
@@ -34,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function hideConfirmDeleteModal() {
         confirmDeleteModalBg.style.display = 'none';
         confirmDeleteModal.style.display = 'none';
-        confirmDeleteBtn.removeAttribute('data-confirm-project-id');
+        currentProjectIdToDelete = null;
     }
 
     function showSuccessDeleteModal(message) {
@@ -51,11 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Manejadores de eventos para los botones y fondos de los modales
     confirmDeleteBtn.onclick = () => {
-        const projectIdToConfirm = confirmDeleteBtn.getAttribute('data-confirm-project-id');
-        console.log('confirmDeleteBtn clickeado. projectIdToConfirm:', projectIdToConfirm);
-        if (projectIdToConfirm) {
+        if (currentProjectIdToDelete) {
             hideConfirmDeleteModal();
-            deleteProject(projectIdToConfirm);
+            deleteProject(currentProjectIdToDelete);
         } else {
             showSuccessDeleteModal('Error: No se pudo obtener el ID del proyecto para confirmar la eliminación.');
         }
@@ -68,14 +111,14 @@ document.addEventListener('DOMContentLoaded', () => {
     successDeleteCloseCross.onclick = hideSuccessDeleteModal;
     successDeleteModalBg.onclick = hideSuccessDeleteModal;
 
-    // Función para renderizar proyectos (adaptada de index.html)
-    function renderProyectos(proyectos) {
-        projectListContainer.innerHTML = '';
+    // Función para renderizar proyectos
+    function renderProyectos(proyectos, container = projectListContainer, noProjectsMsg = noProjectsMessage) {
+        container.innerHTML = '';
         if (proyectos.length === 0) {
-            noProjectsMessage.style.display = 'block';
+            noProjectsMsg.style.display = 'block';
             return;
         }
-        noProjectsMessage.style.display = 'none';
+        noProjectsMsg.style.display = 'none';
 
         proyectos.forEach(p => {
             let overallStatusCalculated = 'pending'; 
@@ -156,34 +199,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const col = document.createElement('div');
-            col.className = 'col-12 col-md-6 col-lg-4';
+            col.className = 'col-12 col-md-6 col-lg-4 d-flex';
             const card = document.createElement('div');
-            card.className = 'card h-100 shadow-sm';
+            card.className = 'card h-100 shadow-sm w-100 d-flex flex-column';
             card.style.cursor = 'pointer';
             card.onclick = () => window.location.href = `detalle.html?id=${p.id}`;
             console.log(`Rendering project with ID: ${p.id}`);
             card.innerHTML = `
-              <div class="card-body d-flex flex-column align-items-center justify-content-center" style="gap: 18px;">
+              <div class="card-body d-flex flex-column align-items-center justify-content-center" style="gap: 18px; position: relative;">
                 <div style="width: 100%; display: flex; justify-content: center;">
                   <div style="background: linear-gradient(90deg, #1976D2 60%, #42a5f5 100%); color: #fff; font-size: 1.5rem; font-weight: bold; border-radius: 18px; padding: 12px 24px; margin-bottom: 0; box-shadow: 0 2px 8px rgba(25,118,210,0.08); text-align: center; min-width: 70%;">
                     ${p.title}
                   </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap: 10px;">
-                  <div style="background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(25,118,210,0.07); padding: 16px 18px; flex-grow: 1; border: 1px solid #e3eafc;">
+                <div class="d-flex flex-row flex-wrap justify-content-between align-items-start w-100 gap-2">
+                  <div style="background: #fff; border-radius: 14px; box-shadow: 0 2px 8px rgba(25,118,210,0.07); padding: 16px 18px; flex-grow: 1; border: 1px solid #e3eafc; min-width: 0;">
                     <div class="card-text mb-1" style="color: #1976D2;"><strong>Área:</strong> ${p.area?.name || p.area}</div>
                     <div class="card-text mb-1" style="color: #1976D2;"><strong>Tipo:</strong> ${p.type?.name || p.type}</div>
                     <div class="card-text mb-1" style="color: #1976D2;"><strong>Monto:</strong> $${p.estimatedAmount}</div>
                     <div class="card-text" style="color: #1976D2;"><strong>Duración:</strong> ${p.estimatedDuration} días</div>
                   </div>
-                  <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 90px;">
+                  <div class="d-flex flex-column justify-content-center align-items-center" style="min-width: 90px; max-width: 120px; flex-shrink: 0;">
                     <div style="font-size: 0.8em; font-weight: bold; color: #555; margin-bottom: 8px;">ESTADO</div>
-                    <div style="background-color: ${badgeColor}; color: ${badgeColor === '#FFEB3B' ? '#333' : '#fff'}; padding: 8px 12px; border-radius: 12px; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.1); white-space: nowrap;">
+                    <div style="background-color: ${badgeColor}; color: ${badgeColor === '#FFEB3B' ? '#333' : '#fff'}; padding: 8px 12px; border-radius: 12px; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.1); white-space: nowrap; text-align: center; width: 100%; max-width: 110px; overflow: hidden; text-overflow: ellipsis;">
                       ${badgeText}
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-danger mt-3 delete-project-btn" data-project-id="${p.id}">Eliminar Proyecto</button>
+                <button class="btn btn-danger btn-sm delete-project-btn" data-project-id="${p.id || ''}" data-project-title="${p.title || ''}" style="position: absolute; bottom: 15px; right: 15px; border-radius: 50%; width: 35px; height: 35px; padding: 0; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);" title="Eliminar proyecto">
+                  <i class="fas fa-trash" style="font-size: 12px;"></i>
+                </button>
               </div>
             `;
             col.appendChild(card);
@@ -193,14 +238,21 @@ document.addEventListener('DOMContentLoaded', () => {
         // Añadir event listeners después de que los elementos estén en el DOM
         document.querySelectorAll('.delete-project-btn').forEach(button => {
             button.addEventListener('click', function(event) {
-                event.stopPropagation(); // Evita que el clic en el botón active el click de la tarjeta
-                event.stopImmediatePropagation(); // Detiene cualquier otro listener en el mismo elemento
+                event.preventDefault();
+                event.stopPropagation();
+                
                 const projectId = this.getAttribute('data-project-id');
-                if (projectId) {
-                    showConfirmDeleteModal(projectId);
-                } else {
-                    showSuccessDeleteModal('Error: No se pudo obtener el ID del proyecto desde el botón de la lista.');
+                const projectTitle = this.getAttribute('data-project-title');
+                
+                console.log('Botón clickeado - ID:', projectId, 'Título:', projectTitle);
+                
+                if (!projectId || projectId === 'undefined' || projectId === 'null') {
+                    console.error('ID del proyecto no válido:', projectId);
+                    showSuccessDeleteModal('Error: No se pudo obtener el ID del proyecto');
+                    return;
                 }
+                
+                showConfirmDeleteModal(projectId);
             });
         });
     }
@@ -240,40 +292,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Función para cargar los proyectos del usuario y los proyectos en los que es aprobador
+    // Función para cargar solo los proyectos creados por el usuario
     async function loadUserProjects() {
         try {
             const userId = usuarioLogueado.id;
+            console.log('=== DEBUG MIS PROYECTOS ===');
+            console.log('Usuario logueado completo:', usuarioLogueado);
+            console.log('ID del usuario:', userId);
+            console.log('Tipo de ID:', typeof userId);
 
-            // 1. Obtener proyectos creados por el usuario
-            const createdProjectsResponse = await fetch(`https://localhost:7098/api/project?applicant=${userId}`);
-            if (!createdProjectsResponse.ok) {
-                throw new Error(`HTTP error! status: ${createdProjectsResponse.status} al cargar proyectos creados.`);
+            if (!userId) {
+                console.error('No se encontró ID de usuario');
+                projectListContainer.innerHTML = '<p class="text-danger">Error: No se pudo identificar al usuario.</p>';
+                noProjectsMessage.style.display = 'none';
+                return;
             }
-            const createdProjects = await createdProjectsResponse.json();
 
-            // 2. Obtener proyectos donde el usuario es aprobador
-            const approvedProjectsResponse = await fetch(`https://localhost:7098/api/project?approvalUser=${userId}`);
-            if (!approvedProjectsResponse.ok) {
-                throw new Error(`HTTP error! status: ${approvedProjectsResponse.status} al cargar proyectos de aprobación.`);
+            // Primero cargar todos los proyectos y filtrar en el frontend
+            console.log('Cargando todos los proyectos...');
+            const allProjectsResponse = await fetch('https://localhost:7098/api/project');
+            
+            if (!allProjectsResponse.ok) {
+                throw new Error(`HTTP error! status: ${allProjectsResponse.status} al cargar proyectos.`);
             }
-            const approvedProjects = await approvedProjectsResponse.json();
+            
+            const allProjects = await allProjectsResponse.json();
+            console.log('Todos los proyectos:', allProjects);
+            console.log('IDs de usuarios en los proyectos:', allProjects.map(p => ({ 
+                id: p.id, 
+                title: p.title, 
+                createdByUserId: p.createdByUser?.id,
+                createdByUserName: p.createdByUser?.name
+            })));
 
-            // Combinar y eliminar duplicados (usando Set para IDs únicos)
-            const allProjectsMap = new Map();
-            createdProjects.forEach(p => allProjectsMap.set(p.id, p));
-            approvedProjects.forEach(p => allProjectsMap.set(p.id, p));
+            // Filtrar proyectos creados por el usuario actual
+            const userProjects = allProjects.filter(project => {
+                const projectCreatorId = project.createdByUser?.id;
+                console.log(`Proyecto "${project.title}": creado por ${projectCreatorId}, usuario actual: ${userId}`);
+                return projectCreatorId == userId; // Usar == para comparación flexible
+            });
 
-            const combinedProjects = Array.from(allProjectsMap.values());
+            console.log('Proyectos filtrados para el usuario:', userProjects);
+            console.log('Cantidad de proyectos del usuario:', userProjects.length);
 
-            renderProyectos(combinedProjects);
+            renderProyectos(userProjects);
         } catch (error) {
             console.error('Error al cargar proyectos:', error);
-            projectListContainer.innerHTML = '<p class="text-danger">Error al cargar los proyectos.</p>';
+            projectListContainer.innerHTML = '<p class="text-danger">Error al cargar los proyectos: ' + error.message + '</p>';
             noProjectsMessage.style.display = 'none';
         }
     }
 
     // Llama a la función para cargar proyectos al inicio
     loadUserProjects();
-}); 
+});

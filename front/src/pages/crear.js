@@ -5,10 +5,20 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
   }
 
-  const userNameDisplay = document.getElementById('userNameDisplay');
-  if (userNameDisplay) {
-      userNameDisplay.textContent = usuarioLogueado.name;
+  // Función para actualizar el nombre del usuario
+  function updateUserDisplay() {
+    const userNameDisplay = document.getElementById('userNameDisplay');
+    if (userNameDisplay && usuarioLogueado.name) {
+        userNameDisplay.textContent = usuarioLogueado.name;
+        console.log('Nombre del usuario actualizado en crear:', usuarioLogueado.name);
+    } else {
+        console.error('No se pudo actualizar el nombre del usuario en crear');
+    }
   }
+  
+  // Ejecutar inmediatamente y también después de un pequeño delay
+  updateUserDisplay();
+  setTimeout(updateUserDisplay, 100);
 
   const logoutButton = document.getElementById('logoutButton');
   if (logoutButton) {
@@ -42,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  const form = document.getElementById('crearProyectoForm');
+  const form = document.getElementById('project-form');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -112,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Cargar áreas
-  fetch('https://localhost:7098/api/area')
+  fetch('https://localhost:7098/api/Area')
     .then(res => {
       if (!res.ok) throw new Error('Error HTTP: ' + res.status);
       return res.json();
@@ -138,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   // Cargar tipos de proyecto
-  fetch('https://localhost:7098/api/projecttype')
+  fetch('https://localhost:7098/api/ProjectType')
     .then(res => {
       if (!res.ok) throw new Error('Error HTTP: ' + res.status);
       return res.json();

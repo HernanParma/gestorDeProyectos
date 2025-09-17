@@ -1,19 +1,32 @@
+console.log('=== APP.JS CARGADO ===');
+
 let proyectosOriginales = [];
 let proyectosFiltrados = [];
 const projectsPerPage = 9;
 let currentPage = 1;
+let usuariosCache = []; // Cache para almacenar los usuarios
 
 document.addEventListener('DOMContentLoaded', () => {
   // Lógica de carga de proyectos y filtros inicial
+  console.log('=== INICIANDO CARGA DE PROYECTOS ===');
   fetch('https://localhost:7098/api/project')
-    .then(res => res.json())
+    .then(res => {
+      console.log('Respuesta del servidor:', res.status, res.statusText);
+      return res.json();
+    })
     .then(data => {
+      console.log('Proyectos recibidos:', data);
+      console.log('Cantidad de proyectos:', data.length);
       proyectosOriginales = data;
       proyectosFiltrados = data;
       renderProyectos(proyectosFiltrados, currentPage);
       setupPagination(proyectosFiltrados);
+      console.log('Proyectos renderizados correctamente');
     })
-    .catch(err => console.error('Error al cargar proyectos:', err));
+    .catch(err => {
+      console.error('Error al cargar proyectos:', err);
+      console.error('Detalles del error:', err.message);
+    });
 
   document.getElementById('search').addEventListener('input', (e) => {
     const filtro = e.target.value.toLowerCase();
@@ -41,26 +54,44 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Lógica para el manejo de usuario logueado en el encabezado
-  const userNameDisplay = document.getElementById('userNameDisplay');
-  const logoutButton = document.getElementById('logoutButton');
+  function updateUserDisplay() {
+    const userNameDisplay = document.getElementById('userNameDisplay');
+    const logoutButton = document.getElementById('logoutButton');
 
-  let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado') || '{}');
+    let usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado') || '{}');
+    
+    console.log('=== DEBUG USUARIO LOGUEADO ===');
+    console.log('Datos del localStorage:', localStorage.getItem('usuarioLogueado'));
+    console.log('Usuario parseado:', usuarioLogueado);
+    console.log('userNameDisplay element:', userNameDisplay);
 
-  if (!usuarioLogueado || !usuarioLogueado.id) {
-      // Si no hay usuario logueado, redirigir a la página de login
-  } else {
-      if (userNameDisplay) {
-          userNameDisplay.textContent = usuarioLogueado.name; 
-      }
+    if (!usuarioLogueado || !usuarioLogueado.id) {
+        console.log('No hay usuario logueado o ID inválido');
+        // Si no hay usuario logueado, redirigir a la página de login
+        // window.location.href = 'login.html';
+    } else {
+        console.log('Usuario válido encontrado:', usuarioLogueado.name);
+        if (userNameDisplay) {
+            userNameDisplay.textContent = usuarioLogueado.name;
+            console.log('Nombre del usuario actualizado en la UI:', usuarioLogueado.name);
+        } else {
+            console.error('Elemento userNameDisplay no encontrado');
+        }
+    }
+
+    // Configurar el botón de logout
+    if (logoutButton) {
+      logoutButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          localStorage.removeItem('usuarioLogueado'); 
+          window.location.href = 'login.html'; 
+      });
+    }
   }
 
-  if (logoutButton) {
-    logoutButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        localStorage.removeItem('usuarioLogueado'); 
-        window.location.href = 'login.html'; 
-    });
-  }
+  // Ejecutar inmediatamente y también después de un pequeño delay para asegurar que el DOM esté listo
+  updateUserDisplay();
+  setTimeout(updateUserDisplay, 100);
 
   const headerSearchInput = document.getElementById('headerSearchInput');
   const headerSearchButton = document.getElementById('headerSearchButton');
@@ -123,7 +154,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       const users = await response.json();
       console.log('Usuarios recibidos de la API:', users); 
-      console.log('Número de usuarios recibidos:', users.length); 
+      console.log('Número de usuarios recibidos:', users.length);
+      
+      // Guardar usuarios en el cache
+      usuariosCache = users; 
 
       const creadorSelect = document.getElementById('creadorSelect');
       const aprobadorSelect = document.getElementById('aprobadorSelect');
@@ -132,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       aprobadorSelect.innerHTML = '<option value="">Todos</option>';
 
       users.forEach(user => {
+        console.log('Agregando usuario al dropdown:', user.id, user.name);
         const creadorOption = document.createElement('option');
         creadorOption.value = user.id;
         creadorOption.textContent = user.name;
@@ -142,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         aprobadorOption.textContent = user.name;
         aprobadorSelect.appendChild(aprobadorOption);
       });
-      console.log('Selectores de usuarios poblados.'); 
+      console.log('Selectores de usuarios poblados. Total usuarios:', users.length); 
 
     } catch (error) {
       console.error('Error al cargar usuarios:', error);
@@ -151,6 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadUsers();
 });
+
+// Función para obtener un usuario por ID desde el cache
+function getUserById(userId) {
+  return usuariosCache.find(user => user.id == userId);
+}
 
 function renderDashboardEstadisticas(proyectos) {
   const dashboard = document.getElementById('dashboard-estadisticas');
@@ -241,7 +281,7 @@ function renderDashboardEstadisticas(proyectos) {
   }, 0);
 }
 
-function aplicarFiltros() {
+async function aplicarFiltros() {
   let tempProyectos = [...proyectosOriginales]; 
 
   const searchText = document.getElementById('search').value.toLowerCase();
@@ -308,12 +348,42 @@ function aplicarFiltros() {
 
   const creadorFiltro = document.getElementById('creadorSelect')?.value;
   if (creadorFiltro) {
-    tempProyectos = tempProyectos.filter(p => p.createdByUserId == creadorFiltro);
+    console.log('Filtrando por creador:', creadorFiltro);
+    console.log('Proyectos antes del filtro de creador:', tempProyectos.length);
+    tempProyectos = tempProyectos.filter(p => {
+      const projectCreatorId = p.createdByUser?.id;
+      console.log(`Proyecto "${p.title}": creado por ${projectCreatorId}, filtro: ${creadorFiltro}`);
+      return projectCreatorId == creadorFiltro;
+    });
+    console.log('Proyectos después del filtro de creador:', tempProyectos.length);
   }
 
   const aprobadorFiltro = document.getElementById('aprobadorSelect')?.value;
   if (aprobadorFiltro) {
-    tempProyectos = tempProyectos.filter(p => p.steps && p.steps.some(s => s.approvalUser?.id == aprobadorFiltro));
+    console.log('Filtrando por aprobador:', aprobadorFiltro);
+    console.log('Proyectos antes del filtro de aprobador:', tempProyectos.length);
+    
+    // Primero necesitamos obtener el rol del usuario seleccionado
+    const selectedUser = await getUserById(aprobadorFiltro);
+    if (selectedUser && selectedUser.role) {
+      const userRoleName = selectedUser.role.name;
+      console.log('Rol del usuario seleccionado:', userRoleName);
+      
+      tempProyectos = tempProyectos.filter(p => {
+        if (!p.steps || p.steps.length === 0) return false;
+        
+        // Buscar si hay algún paso que corresponda al rol del usuario
+        const hasMatchingStep = p.steps.some(step => {
+          const stepRoleName = step.roleName;
+          console.log(`Proyecto "${p.title}": paso con rol "${stepRoleName}", usuario rol "${userRoleName}"`);
+          return stepRoleName === userRoleName;
+        });
+        
+        console.log(`Proyecto "${p.title}": tiene paso para el rol del usuario: ${hasMatchingStep}`);
+        return hasMatchingStep;
+      });
+    }
+    console.log('Proyectos después del filtro de aprobador:', tempProyectos.length);
   }
 
   proyectosFiltrados = tempProyectos;
@@ -324,14 +394,31 @@ function aplicarFiltros() {
 }
 
 function renderProyectos(proyectos, page) {
+  console.log('=== RENDERIZANDO PROYECTOS ===');
+  console.log('Proyectos recibidos:', proyectos);
+  console.log('Página actual:', page);
+  console.log('Proyectos por página:', projectsPerPage);
+  
   const projectsListContainer = document.getElementById('project-list'); 
+  console.log('Contenedor de proyectos:', projectsListContainer);
+  
+  if (!projectsListContainer) {
+    console.error('ERROR: No se encontró el elemento project-list');
+    return;
+  }
+  
   projectsListContainer.innerHTML = '';
 
   const startIndex = (page - 1) * projectsPerPage;
   const endIndex = startIndex + projectsPerPage;
   const projectsToRender = proyectos.slice(startIndex, endIndex);
+  
+  console.log('Índice de inicio:', startIndex);
+  console.log('Índice de fin:', endIndex);
+  console.log('Proyectos a renderizar:', projectsToRender);
 
   if (projectsToRender.length === 0 && proyectos.length > 0 && page > 1) {
+    console.log('No hay proyectos en esta página, retrocediendo...');
     currentPage = page - 1;
     renderProyectos(proyectos, currentPage);
     setupPagination(proyectos);
@@ -339,6 +426,7 @@ function renderProyectos(proyectos, page) {
   }
   
   if (projectsToRender.length === 0) {
+    console.log('No hay proyectos para mostrar');
     projectsListContainer.innerHTML = '<p class="text-center text-muted">No se encontraron proyectos.</p>';
     return;
   }
@@ -346,6 +434,8 @@ function renderProyectos(proyectos, page) {
   renderDashboardEstadisticas(proyectos);
 
   projectsToRender.forEach(p => {
+    console.log('Renderizando proyecto:', p.id, p.title);
+    
     let overallStatusCalculated = 'pending';
     let badgeColor = '#FFEB3B';
     let badgeText = 'Pendiente';
@@ -430,7 +520,7 @@ function renderProyectos(proyectos, page) {
     card.style.cursor = 'pointer';
     card.onclick = () => window.location.href = `detalle.html?id=${p.id}`;
     card.innerHTML = `
-      <div class="card-body d-flex flex-column align-items-center justify-content-center" style="gap: 18px;">
+      <div class="card-body d-flex flex-column align-items-center justify-content-center" style="gap: 18px; position: relative;">
         <div style="width: 100%; display: flex; justify-content: center;">
           <div style="background: linear-gradient(90deg, #1976D2 60%, #42a5f5 100%); color: #fff; font-size: 1.5rem; font-weight: bold; border-radius: 18px; padding: 12px 24px; margin-bottom: 0; box-shadow: 0 2px 8px rgba(25,118,210,0.08); text-align: center; min-width: 70%;">
             ${p.title}
@@ -450,10 +540,34 @@ function renderProyectos(proyectos, page) {
             </div>
           </div>
         </div>
+        <button class="btn btn-danger btn-sm delete-project-btn" data-project-id="${p.id || ''}" data-project-title="${p.title || ''}" style="position: absolute; bottom: 15px; right: 15px; border-radius: 50%; width: 35px; height: 35px; padding: 0; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);" title="Eliminar proyecto">
+          <i class="fas fa-trash" style="font-size: 12px;"></i>
+        </button>
       </div>
     `;
     col.appendChild(card);
     projectsListContainer.appendChild(col);
+  });
+
+  // Agregar event listeners a los botones de eliminar
+  document.querySelectorAll('.delete-project-btn').forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      const projectId = this.getAttribute('data-project-id');
+      const projectTitle = this.getAttribute('data-project-title');
+      
+      console.log('Botón clickeado - ID:', projectId, 'Título:', projectTitle);
+      
+      if (!projectId || projectId === 'undefined' || projectId === 'null') {
+        console.error('ID del proyecto no válido:', projectId);
+        alert('Error: No se pudo obtener el ID del proyecto');
+        return;
+      }
+      
+      eliminarProyecto(projectId, projectTitle);
+    });
   });
 }
 
@@ -580,4 +694,67 @@ function filtrarPorEstadoDashboard(status) {
   renderProyectos(proyectosFiltrados, currentPage);
   setupPagination(proyectosFiltrados);
   renderDashboardEstadisticas(proyectosFiltrados);
+}
+
+async function eliminarProyecto(id, titulo) {
+  console.log('Intentando eliminar proyecto:', id, titulo);
+  
+  // Validar que el ID sea válido
+  if (!id || id === 'undefined' || id === 'null' || id === '') {
+    console.error('ID del proyecto no válido:', id);
+    alert('Error: ID del proyecto no válido');
+    return false;
+  }
+  
+  if (!confirm(`¿Estás seguro de que deseas eliminar el proyecto "${titulo}"? Esta acción no se puede deshacer.`)) {
+    return false;
+  }
+
+  try {
+    console.log('Enviando petición DELETE a:', `https://localhost:7098/api/project/${id}`);
+    
+    const response = await fetch(`https://localhost:7098/api/project/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    console.log('Respuesta del servidor:', response.status, response.statusText);
+
+    if (response.ok) {
+      // Eliminar el proyecto de las listas locales
+      proyectosOriginales = proyectosOriginales.filter(p => p.id !== id);
+      proyectosFiltrados = proyectosFiltrados.filter(p => p.id !== id);
+      
+      // Re-renderizar la lista
+      renderProyectos(proyectosFiltrados, currentPage);
+      setupPagination(proyectosFiltrados);
+      renderDashboardEstadisticas(proyectosFiltrados);
+      
+      // Mostrar mensaje de éxito
+      alert('Proyecto eliminado exitosamente');
+    } else {
+      let errorMessage = 'Error al eliminar el proyecto';
+      try {
+        const errorData = await response.json();
+        console.error('Error del servidor (JSON):', errorData);
+        if (errorData.errors && errorData.errors.id) {
+          errorMessage = `Error de validación: ${errorData.errors.id[0]}`;
+        } else if (errorData.title) {
+          errorMessage = errorData.title;
+        }
+      } catch (e) {
+        const errorText = await response.text();
+        console.error('Error del servidor (texto):', errorText);
+        errorMessage = errorText || errorMessage;
+      }
+      throw new Error(errorMessage);
+    }
+  } catch (error) {
+    console.error('Error al eliminar proyecto:', error);
+    alert('Error al eliminar el proyecto: ' + error.message);
+  }
+  
+  return false;
 }
